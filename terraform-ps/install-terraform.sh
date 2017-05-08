@@ -15,7 +15,6 @@ sha256sum -c --quiet terraform_${TERRAFORM_VERSION}_SHA256SUMS
 unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /bin
 rm -f terraform_${TERRAFORM_VERSION}_linux_amd64.zip
 
-apt remove -y --purge git curl openssh-client unzip
 apt autoremove -y
 
 rm -rf /var/cache/apt/*
