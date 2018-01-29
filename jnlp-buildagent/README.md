@@ -1,8 +1,8 @@
-# 10th Magnitude Jenkins JNLP Build Agent Docker Image with Build Tools
+# 10th Magnitude Jenkins JNLP Build Agent with Build Tools Docker Image
 
  **Note** This image is based on the image [jenkinsci/docker-jnlp-slave](https://github.com/jenkinsci/docker-jnlp-slave) and [jenkinsci/docker-jnlp-slave](https://hub.docker.com/r/jenkinsci/jnlp-slave)
 
-This is an image  designed as to be used as a [Jenkins](https://jenkins.io) agent (FKA "slave") using JNLP to establish connection.
+This is an image  designed as to be used as a [Jenkins](https://jenkins.io) agent (FKA "slave") using JNLP to establish a connection.
 This agent is powered by the [Jenkins Remoting library](https://github.com/jenkinsci/remoting), which version is being taken from the base [Docker Agent](https://github.com/jenkinsci/docker-slave/) image.
 
 It also includes build tools such as [Packer](http://packer.io), [Terraform](http:/terraform.io), [Ansible](https://www.ansible.com/), and [bundler](http://bundler.io).
