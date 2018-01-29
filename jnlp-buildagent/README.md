@@ -1,11 +1,8 @@
 # 10th Magnitude Jenkins JNLP Build Agent with Build Tools Docker Image
 
- **Note** This image is based on the image [jenkinsci/docker-jnlp-slave](https://github.com/jenkinsci/docker-jnlp-slave) and [jenkinsci/docker-jnlp-slave](https://hub.docker.com/r/jenkinsci/jnlp-slave)
+ **Note:** This image is based on the image [jenkinsci/docker-jnlp-slave](https://github.com/jenkinsci/docker-jnlp-slave) (Github) and [jenkinsci/docker-jnlp-slave](https://hub.docker.com/r/jenkinsci/jnlp-slave) (Docker Hub).
 
-This is an image  designed as to be used as a [Jenkins](https://jenkins.io) agent (FKA "slave") using JNLP to establish a connection.
-This agent is powered by the [Jenkins Remoting library](https://github.com/jenkinsci/remoting), which version is being taken from the base [Docker Agent](https://github.com/jenkinsci/docker-slave/) image.
-
-It also includes build tools such as [Packer](http://packer.io), [Terraform](http:/terraform.io), [Ansible](https://www.ansible.com/), and [bundler](http://bundler.io).
+This is an image  designed as to be used as a [Jenkins](https://jenkins.io) agent (FKA "slave") using JNLP to establish a connection. This agent is powered by the [Jenkins Remoting library](https://github.com/jenkinsci/remoting), which version is being taken from the base [Docker Agent](https://github.com/jenkinsci/docker-slave/) image. It also includes build tools such as [Packer](http://packer.io), [Terraform](http:/terraform.io), [Ansible](https://www.ansible.com/), and [bundler](http://bundler.io).
 
 See [Jenkins Distributed builds](https://wiki.jenkins-ci.org/display/JENKINS/Distributed+builds) for more info.
 
@@ -13,11 +10,11 @@ See [Jenkins Distributed builds](https://wiki.jenkins-ci.org/display/JENKINS/Dis
 
 To run a Docker container
 
-    docker run jenkins/jnlp-slave -url http://jenkins-server:port <secret> <agent name>
+    docker run 10thmagnitude/jnlp-buildagent -url http://jenkins-server:port <secret> <agent name>
 
 To run a Docker container with [Work Directory](https://github.com/jenkinsci/remoting/blob/master/docs/workDir.md):
 
-    docker run jenkins/jnlp-slave -url http://jenkins-server:port -workDir=/home/jenkins/agent <secret> <agent name>
+    docker run 10thmagnitude/jnlp-buildagent -url http://jenkins-server:port -workDir=/home/jenkins/agent <secret> <agent name>
 
 Optional environment variables:
 

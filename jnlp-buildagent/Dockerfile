@@ -14,7 +14,7 @@ ARG AGENT_WORKDIR=/home/jenkins/agent
 
 # Install dev/build dependencies
 RUN apt-get update && \
-    apt-get install -qy wget curl unzip ansible ruby bundler rake openjdk-8-jdk && \
+    apt-get install -qy wget curl unzip git ansible ruby bundler rake openjdk-8-jdk && \
     wget -O /tmp/packer.zip  "https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip" && \
     unzip -o /tmp/packer.zip -d /usr/local/bin && \
     rm -f /tmp/packer.zip && \
